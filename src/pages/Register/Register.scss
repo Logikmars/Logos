@@ -1,0 +1,84 @@
+.Register{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1600px;
+    margin-top: calc(35px + 36px + 100px);
+    &__title{
+        font-family: "ClashDisplay";
+        font-size: 45px;
+        font-weight: 500;
+    }
+    &__description{
+        color: #8B8B8B;
+        font-family: "SFPro";
+        font-size: 12px;
+        max-width: 365px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+    &__form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+
+        input{
+            margin-top: 20px;
+            font-family: "ClashDisplay";
+            font-size: 14px;
+            background-color: transparent;
+            border: 1px solid rgba($color: #D9D9D9, $alpha: .5);
+            width: 430px;
+            padding: 15px 0 15px 10px;
+            color: white;
+            border-radius: 3px;
+            @media (max-width: 500px){
+                width: 300px;
+            }
+        }
+        &-btn{
+            margin-top: 52px;
+            width: 430px;
+            border-radius: 3px;
+            padding: 14px 0 14px 0;
+            font-family: "ClashDisplay";
+            background-color: #7177FF;
+            font-weight: 500;
+            @media (max-width: 500px){
+                width: 300px;
+            }
+        }
+    }
+    &__btn{
+        top: 55%;
+    }
+    &__footer{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        // width: 100%;
+        // не работает ширина 100%
+        width: 430px;
+        align-items: center;
+        @media (max-width: 500px){
+            width: 300px;
+            flex-direction: column;
+        }
+        a{
+            font-family: "Helvetica";
+            font-size: 15px;
+            font-weight: 300;
+        }
+        span{
+            font-family: "Helvetica";
+            font-weight: bolder;
+            font-size: 16px;
+        }
+    }
+}

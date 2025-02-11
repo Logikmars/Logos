@@ -1,0 +1,154 @@
+@keyframes Mouse {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+@keyframes Arrow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.Welcome {
+    width: 80%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 880px){
+        width: 100%;
+    }
+
+    &__decor {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @media (max-width: 880px){
+            width: 90%;
+            &-Illustration{
+                width: 100%;
+            }
+        }
+        &-wrapper {
+            position: absolute;
+            top: 290px;
+            @media (max-width: 880px){
+                width: 28%;
+                top: 41%;
+                
+            }
+        }
+    }
+
+    &__swipe {
+        width: 100%;
+        max-width: 1700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 300px;
+        gap: 37px;
+        scroll-behavior: smooth;
+        white-space: nowrap;
+        padding: 10px 0;
+        @media (max-width: 900px){
+            width: 80%;
+            top: 40%;
+            gap: 10px;
+        }
+        @media (max-width: 880px){
+            top: 39.5%;
+        }
+        @media (max-width: 640px){
+            top: 38.5%;
+        }
+        @media (max-width: 370px){
+            top:36.5%;
+        }
+        img {
+            width: 100px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            flex-shrink: 0;
+            @media (max-width: 640px){
+                width: 15%;
+            }
+        }
+
+        img.selected {
+            width: 120px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+            margin-left: 20px;
+            margin-right: 20px;
+            @media (max-width: 640px){
+                width: 20%;
+            }
+        }
+    }
+
+    &__mouse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-mouse{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            top: 600px;
+            &-img{
+                animation: Mouse 5s infinite ease-in-out;
+            }
+            &-arrow{
+                animation: Arrow 5s infinite ease-in-out;
+            }
+            @media (max-width: 880px){
+                top: 77%;
+            }
+
+        }
+        &-desc{
+            display: flex;
+            justify-content: center;
+            gap: 37px;
+            font-family: "ClashDisplay";
+            font-size: 18px;
+            align-items: center;
+            @media (max-width: 680px){
+                font-size: 14px;
+            }
+            @media (max-width: 410px){
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.inactive{
+    background: linear-gradient(45deg, #FFFFFF00, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "ClashDisplay";
+}
+
+.inactive2{
+    background: linear-gradient(45deg, #FFFFFF, #FFFFFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "ClashDisplay";
+}
+
+.activeVisa{
+    font-size: 25px;
+    font-family: "ClashDisplay";
+}
