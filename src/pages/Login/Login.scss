@@ -1,4 +1,4 @@
-.Login{
+.Login {
     width: 100%;
     max-width: 1600px;
     display: flex;
@@ -6,20 +6,24 @@
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    &__form{
+
+    &__form {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        h3{
+
+        h3 {
             font-family: "ClashDisplay";
             font-size: 45px;
-            @media (max-width: 340px){
+
+            @media (max-width: 340px) {
                 font-size: 40px;
             }
         }
-        &-desc{
+
+        &-desc {
             max-width: 300px;
             font-size: 12px;
             font-family: "SFPro";
@@ -27,7 +31,8 @@
             text-align: center;
             color: #8B8B8B;
         }
-        &-form{
+
+        &-form {
             margin-top: 30px;
             display: flex;
             justify-content: center;
@@ -35,30 +40,41 @@
             flex-direction: column;
             width: 100%;
             gap: 20px;
-            @media (max-width: 500px){
+
+            @media (max-width: 500px) {
                 width: 80%;
             }
 
-            input{
+            input {
                 height: 45px;
                 width: 430px;
-                background-color: transparent;
-                border: 1px solid #D9D9D950;
+                background-color: #fff0;
+                border: 1px solid #D9D9D988;
                 border-radius: 3px;
                 font-family: "ClashDisplay";
                 font-size: 14px;
                 color: white;
-                padding-left: 10px;
-                @media (max-width: 500px){
+                padding-left: 20px;
+                outline: none;
+                transition: background-color 200ms, color 200ms;
+
+                &:focus {
+                    background-color: #fff;
+                    color: black;
+                }
+
+                @media (max-width: 500px) {
                     width: 300px;
                 }
             }
-            &-container{
+
+            &-container {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                &-btn{
+
+                &-btn {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -68,36 +84,60 @@
                     background-color: transparent;
                 }
             }
-            &-inner{
+
+            &-inner {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                
-                &-check{
+
+                &-check {
+                    width: 17px;
+                    height: 17px;
+                    font-family: "SFPro";
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 3px;
-                    font-family: "SFPro";
-                    font-size: 11px;
-                    input{
-                        width: 17px;
-                        height: 17px;
-                        font-family: "SFPro";
+                    background-color: #7177FF88 !important;
+                    transition: background-color 200ms;
+                    border-radius: 3px;
+
+                    img {
+                        opacity: 0;
+                        transition: opacity 200ms;
                     }
-                    input:checked{
-                        background: #7177FF !important;
-                        border-color: #8a2be2 !important;
+
+
+                    &_checked {
+                        background-color: #7177FF !important;
+
+                        img {
+                            opacity: 1;
+                        }
+
+                    }
+
+                    &_block {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3px;
+                        font-family: "SFPro";
+                        font-size: 11px;
+                        user-select: none;
+
                     }
                 }
-                a{
+
+                a {
                     font-family: "SFPro";
                     font-size: 11px;
                 }
             }
-            &-btn{
-                
+
+            &-btn {
+
                 font-family: "ClashDisplay";
                 width: 100%;
                 background-color: #7177FF;
@@ -107,22 +147,26 @@
             }
         }
     }
-    &__description{
+
+    &__description {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             flex-direction: column;
         }
+
         // Почему не работает ширина?
         // Почему если ставить ширину через max-width, то двигается всё остальное?
-        a{
+        a {
             font-family: "Helvetica";
             font-size: 15px;
             font-weight: 400;
             color: rgba($color: #ffffff, $alpha: 0.5);
-            span{
+
+            span {
                 font-weight: 700;
                 font-family: "Helvetica";
                 font-size: 15px;

@@ -121,6 +121,7 @@ button {
 
 input,
 textarea {
+    font-family: 'Montserrat';
     box-sizing: border-box;
 }
 
@@ -144,32 +145,23 @@ html {
 
 body {
     width: 100vw;
-    background-color: black;
-    background: radial-gradient(circle, rgba(40, 40, 60, 1) 10%, rgba(0, 0, 0, 1) 70%);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: radial-gradient(circle, rgba(94, 93, 135, 0.25) 0%, rgba(36, 35, 59, 0) 61%);
+    min-height: 100vh;
+    background-color: #060606;
 }
 
 
 .App {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100dvh;
-    max-height: 100dvh;
-    align-items: center;
-    align-content: space-between;
-    justify-content: center;
+    width: 100%;
     overflow: hidden;
 
-
-    @media(max-width: 1000px) {
-        align-content: baseline;
-        justify-content: flex-start;
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: calc(100dvh - 88px);
+        align-items: center;
+        align-content: center;
     }
-
-
 }
 
 

@@ -10,12 +10,14 @@ function App() {
   const [tab, settab] = useState('Welcome');
   return (
     <>
-      <Header settab={settab}/>
-      {tab === 'Welcome' && <Welcome />}
-      {tab === 'Login' && <Login settab={settab} />}
-      {tab === 'Register' && <Register settab={settab} />}
-      {tab === 'Forgot' && <Forgot settab={settab} />}
-      {tab === 'Verify' && <Verify settab={settab} />}
+      <Header settab={settab} />
+      <div className='App_content'>
+        {tab === 'Welcome' && <Welcome />}
+        {tab === 'Login' && <Login settab={settab} />}
+        {tab === 'Register' && <Register settab={settab} />}
+        {tab === 'Forgot' && <Forgot settab={settab} />}
+        {tab === 'Verify' && <Verify settab={settab} />}
+      </div>
     </>
   )
 }
