@@ -1,4 +1,4 @@
-.Protocols{
+.Protocols {
     width: 100%;
     max-width: 1600px;
     display: flex;
@@ -6,43 +6,51 @@
     // align-items: center;
     gap: 5px;
     margin: 0 auto;
-    @media (max-width: 900px){
+
+    @media (max-width: 900px) {
         flex-direction: column;
     }
-    @media (max-width: 500px){
+
+    @media (max-width: 500px) {
         padding-left: 24px;
         padding-right: 24px;
     }
-    &__description{
+
+    &__description {
         width: calc(100% - 55%);
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
         gap: 12px;
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             order: 2;
             width: 100%;
             margin: 0 auto;
         }
     }
 
-    &__line{
+    &__line {
         width: calc(100% - 90%);
         display: flex;
         // justify-content: start;
         // align-items: start;
+        opacity: 0;
         flex-direction: column;
         gap: 5px;
         flex-wrap: wrap;
         align-content: space-between;
-        @media (max-width: 1200px){
+
+        @media (max-width: 1200px) {
             align-content: center;
         }
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             display: none;
         }
-        &-dot{
+
+        &-dot {
             width: 5px;
             height: 15px;
             background: #D9D9D919;
@@ -52,7 +60,7 @@
 
     }
 
-    &__feauteres{
+    &__feauteres {
         width: calc(100% - 55%);
         display: flex;
         justify-content: start;
@@ -60,48 +68,57 @@
         flex-wrap: wrap;
         gap: 20px;
         max-width: 500px;
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             order: 1;
             width: 100%;
             margin: 0 auto;
             justify-content: center;
         }
-        @media (max-width: 500px){
+
+        @media (max-width: 500px) {
             justify-content: start;
         }
-        &-title{
+
+        &-title {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-family: "ClashDisplay";
             font-size: 48px;
             font-weight: 700;
-            @media (max-width: 900px){
+
+
+            @media (max-width: 900px) {
                 text-align: center;
+
+                br {
+                    display: none;
+                }
             }
-            @media (max-width: 500px){
+
+            @media (max-width: 500px) {
                 text-align: left;
                 font-size: 40px;
             }
-            span{
-                background: linear-gradient(to bottom, #FFFFFF 0%, #999999 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-family: "ClashDisplay";
-                font-size: 48px;
-                font-weight: 700;
-            }
         }
-        &-description{
+
+        &-description {
             font-family: "Helvetica";
             color: #ACACAC;
             font-size: 15px;
             line-height: 25px;
-            @media (max-width: 900px){
+
+            @media (max-width: 900px) {
                 text-align: center;
             }
-            @media (max-width: 500px){
+
+            @media (max-width: 500px) {
                 text-align: left;
             }
         }
-        &-btn{
+
+        &-btn {
             width: 140px;
             height: 42px;
             display: flex;
@@ -112,14 +129,24 @@
             padding: 13px 5px 13px 13px;
             font-family: "Helvetica";
             font-size: 12px;
-            transition: all 500ms ease-in-out;
-            @media (max-width: 900px){
+            transition: all 300ms ease-in-out;
+
+            img {
+                transition: filter 300ms;
+            }
+
+            @media (max-width: 900px) {
                 margin-bottom: 20px;
             }
         }
-        &-btn:hover{
+
+        &-btn:hover {
             background-color: #000000;
             color: #FFFFFF;
+
+            img {
+                filter: invert(1);
+            }
         }
     }
 }

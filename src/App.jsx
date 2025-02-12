@@ -8,14 +8,16 @@ import Verify from "./pages/Verify/Verify";
 import PasswordReset from "./pages/PasswordReset/PasswordReset";
 import Protocols from "./pages/Protocols/Protocols";
 import Cards from "./pages/Cards/Cards";
+import { observer } from "mobx-react-lite";
 
-function App() {
+export default observer(() => {
   const [tab, settab] = useState('Welcome');
+
   return (
     <>
       <Header settab={settab} />
       <div className='App_content'>
-        {tab === 'Welcome' && <Welcome settab={settab}/>}
+        {tab === 'Welcome' && <Welcome settab={settab} />}
         {tab === 'Login' && <Login settab={settab} />}
         {tab === 'Register' && <Register settab={settab} />}
         {tab === 'Forgot' && <Forgot settab={settab} />}
@@ -26,9 +28,7 @@ function App() {
       </div>
     </>
   )
-}
-
-export default App
+})
 
 // TODO: валидация форм
 // TODO: можно все инпуты сделать одним компонентом, нужно

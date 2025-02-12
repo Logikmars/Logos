@@ -1,9 +1,8 @@
 import './InputBlock.scss';
 import { useState } from 'react';
 import { observer } from "mobx-react-lite";
-import inputStore from "../../stores/inputStore";
 
-const InputBlock = observer(({ placeholder, type }) => {
+const InputBlock = observer(({ placeholder, type, value, setvalue }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -12,12 +11,12 @@ const InputBlock = observer(({ placeholder, type }) => {
 
     return (
         <div className='InputBlock'>
-            <input 
-                type={type === "password" && showPassword ? "text" : type} 
-                placeholder={placeholder} 
+            <input
+                type={type === "password" && showPassword ? "text" : type}
+                placeholder={placeholder}
                 className='InputBlock__input'
-                value={inputStore.inputValue} 
-                onChange={(e) => inputStore.setInputValue(e.target.value)}
+                value={value}
+                onChange={(e) => setvalue(e.target.value)}
             />
             {type === "password" && (
                 <button

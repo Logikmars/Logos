@@ -62,6 +62,7 @@
         align-items: center;
         gap: 10px;
         pointer-events: all;
+
         &-logo {
             font-family: "ClashDisplay";
             font-size: 11px;
@@ -125,12 +126,13 @@
             font-size: 14px;
             color: #CACFD8;
             transition: transform 200ms ease-in-out;
-            
+
             @media(max-width: 900px) {
                 width: 100%;
             }
         }
-        &-nav:hover{
+
+        &-nav:hover {
             transform: scale(1.1);
         }
 
@@ -169,21 +171,23 @@
             background: linear-gradient(270deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 30%, #FFFFFF99 100%);
+            background-size: 200% 200%;
+            background-position: 0% 0%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all 0.3s ease-in-out;
+
             @media (max-width: 400px) {
                 font-size: 12px;
             }
+
+            &:hover {
+                border-color: rgba(255, 255, 255, 0.4);
+                // transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+                background-position: 100% 100%;
+            }
         }
 
-        &-id:hover {
-            background: linear-gradient(to left, rgba(255, 255, 255, 0.3) 30%, #FFFFFF99 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            border-color: rgba(255, 255, 255, 0.4);
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
     }
 }
