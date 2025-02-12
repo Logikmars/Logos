@@ -1,22 +1,37 @@
 .Forgot{
-    width: 90%;
-    max-width: 1600px;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: 0 auto;
-    min-width: 800px;
-    @media (max-width: 900px){
-        min-width: 0px;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 1600px;
+    min-height: calc(100dvh - 88px);
+    &_balancer,
+    &_content,
+    &__footer {
+        width: 100%;
+    }
+
+    &_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     &__title{
         font-family: "ClashDisplay";
-        font-weight: 400;
         font-size: 45px;
+        font-weight: 700;
+        background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 44%, #9999 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-align: center;
-        width: 100%;
+        
         @media (max-width: 900px){
             width: 500px;
         }
@@ -30,36 +45,23 @@
         }
     }
     &__description{
-        margin-top: 5px;
         color: #8B8B8B;
-        font-size: 12px;
         font-family: "SFPro";
-        font-weight: 300;
+        font-size: 12px;
+        max-width: 365px;
         text-align: center;
+        margin-top: 5px;
+        margin-bottom: 30px;
     }
     &__form{
-        margin-top: 30px;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        @media (max-width: 900px){
-            width: 0;
-        }
-        input{
-            width: 430px;
-            font-family: "ClashDisplay";
-            font-size: 14px;
-            color: white;
-            font-weight: 300;
-            padding: 15px 0 15px 10px;
-            background-color: transparent;
-            border: 1px solid #D9D9D950;
-            border-radius: 3px;
-            @media (max-width: 500px){
-                width: 300px;
-            }
+        width: 70%;
+        gap: 20px;
+        @media (max-width: 500px) {
+            width: 80%;
         }
         button{
             width: 430px;
@@ -70,22 +72,32 @@
             font-weight: 400px;
             margin-top: 50px;
             @media (max-width: 500px){
-                width: 300px;
+                width: 250px;
             }
         }
     }
     &__footer{
-        width: 430px;
+        margin-top: 50px;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
-        @media (max-width: 500px){
-            width: 300px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+        @media(max-height: 750px) {
+            padding-top: 0px;
         }
-        a{
+
+        @media (max-width: 900px) {
+            width: 300px;
+            flex-direction: column;
+        }
+
+        a {
             font-family: "Helvetica";
             font-size: 15px;
-            color: rgba($color: #ffffff, $alpha: .5);
+            font-weight: 300;
+            color: rgba($color: #ffffff, $alpha: 0.5);
         }
     }
 }

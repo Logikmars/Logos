@@ -1,0 +1,131 @@
+.Verify{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 1600px;
+    min-height: calc(100dvh - 88px);
+    &_balancer,
+    &_content,
+    &__footer {
+        width: 100%;
+    }
+
+    &_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-family: "ClashDisplay";
+        font-size: 45px;
+        font-weight: 700;
+        background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 44%, #9999 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        @media (max-width: 900px){
+            width: 500px;
+        }
+        @media (max-width: 500px){
+            font-size: 35px;
+            width: 350px;
+        }
+        @media (max-width: 360px){
+            width: 300px;
+            font-size: 32px;
+        }
+    }
+    &__description{
+        color: #8B8B8B;
+        font-family: "SFPro";
+        font-size: 12px;
+        max-width: 365px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+    &__form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        gap: 20px;
+        @media (max-width: 500px) {
+            width: 80%;
+        }
+        input{
+            width: 57px;
+            height: 62px;
+            border-radius: 3px;
+            border: 1px solid #7177FF;
+            background-color: transparent;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 400;
+            font-family: "SofiaSans";
+            @media (max-width: 500px){
+                width: 40px;
+                height: 50px;
+                font-size: 28px;
+            }
+            @media (max-width: 360px){
+                width: 35px;
+                height: 45px;
+                font-size: 24px;
+            }
+        }
+
+        button{
+            width: 430px;
+            font-family: "ClashDisplay";
+            padding: 14px 0 14px 0;
+            background-color: #7177FF;
+            font-size: 15px;
+            font-weight: 400px;
+            margin-top: 50px;
+            @media (max-width: 500px){
+                width: 300px;
+            }
+        }
+        &-inputs{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+    }
+    &__footer{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+        @media(max-height: 750px) {
+            padding-top: 0px;
+        }
+
+        @media (max-width: 900px) {
+            width: 300px;
+            flex-direction: column;
+        }
+
+        a {
+            font-family: "Helvetica";
+            font-size: 15px;
+            font-weight: 300;
+            color: rgba($color: #ffffff, $alpha: 0.5);
+        }
+    }
+}

@@ -135,17 +135,19 @@
 }
 
 .inactive{
-    background: linear-gradient(45deg, #FFFFFF00, #FFFFFF);
+    background: linear-gradient(45deg, #FFFFFF00, #FFFFFF33);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "ClashDisplay";
+    font-size: 15px;
 }
 
 .inactive2{
-    background: linear-gradient(45deg, #FFFFFF, #FFFFFF00);
+    background: linear-gradient(45deg, #FFFFFF33, #FFFFFF00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "ClashDisplay";
+    font-size: 15px;
 }
 
 .activeVisa{

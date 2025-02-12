@@ -1,0 +1,136 @@
+.Cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &_balancer{
+        width: 100%;
+        padding-top: 65px;
+    }
+    &__title{
+        font-family: "ClashDisplay";
+        font-size: 62px;
+        background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 44%, #999999 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width: 650px){
+            max-width: 350px;
+            text-align: center;
+        }
+        @media (max-width: 380px){
+            font-size: 55px;
+        }
+    }
+    &__description{
+        font-family: "SFPro";
+        font-size: 14px;
+        line-height: 22px;
+        color: #8B8B8B;
+        max-width: 570px;
+        text-align: center;
+        @media (max-width: 650px){
+            max-width: 350px;
+            text-align: center;
+        }
+        @media (max-width: 380px){
+            font-size: 12px;
+        }
+    }
+    &__join{
+        margin-top: 32px;
+        font-family: "SFPro";
+        font-size: 13px;
+    }
+    &__container{
+        margin-top: 15px;
+        width: 350px;
+        border-radius: 57px;
+        
+        padding: 5px 5px 5px 5px;
+        position: relative;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 380px){
+            width: 300px;
+        }
+        input{
+            background-color: rgba($color: #D9D9D9, $alpha: .002);
+            width: 100%;
+            border: none;
+            color: white;
+            border: 1px solid #FFFFFF34;
+            height: 100%;
+            border-radius: 57px;
+            padding-left: 20px;
+            font-family: "Helvetica";
+            font-size: 12px;
+        }
+        button{
+            position: absolute;
+            width: 82px;
+            height: 28px;
+            border-radius: 113px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 9px;
+            font-family: "Helvetica";
+            padding-left: 10px;
+            padding-right: 10px;
+            left: 70%;
+            transition: all 500ms ease-in-out;
+            @media (max-width: 380px){
+                left: 65%;
+            }
+            img{
+                width: 22px;
+                height: 22px;
+            }
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+        }
+    }
+    &__item{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-choise{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0px;
+            gap: 20px;
+            @media (max-width: 650px){
+                bottom: -150px;
+            }
+            &-mouse{
+                animation: Mouse 5s infinite ease-in-out;
+            }
+            &-arrows{
+                animation: Arrow 5s infinite ease-in-out;
+            }
+            &-choise{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                a{
+                    font-family: "ClashDisplay";
+                    @media (max-width: 400px){
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

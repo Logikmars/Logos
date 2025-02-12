@@ -1,0 +1,60 @@
+.InputBlock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 430px;
+    @media (max-width: 500px) {
+        max-width: 300px;
+    }
+    input{
+        height: 45px;
+        width: 430px;
+        background-color: #fff0;
+        border: 1px solid #D9D9D988;
+        border-radius: 3px;
+        font-family: "ClashDisplay";
+        font-size: 14px;
+        color: white;
+        padding-left: 20px;
+        outline: none;
+        transition: background-color 200ms, color 200ms;
+        font-weight: 300;
+        letter-spacing: 3%;
+
+        &:focus {
+            background-color: #fff;
+            color: black;
+        }
+
+        @media (max-width: 500px) {
+            width: 300px;
+        }
+        @media (max-width: 450px) {
+            width: 200px;
+        }
+    }
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        background-color: transparent;
+        img{
+            width: 14px;
+            height: 12px;
+        }
+        @media (max-width: 450px){
+            right: 50px;
+        }
+        @media (max-width: 400px){
+            right: 30px;
+        }
+        @media (max-width: 360px){
+            right: 20px;
+        }
+    }
+}

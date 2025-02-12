@@ -1,3 +1,4 @@
+import InputBlock from '../../components/InputBlock/InputBlock';
 import './Login.scss';
 import { useState } from 'react';
 
@@ -10,40 +11,31 @@ export default ({ settab }) => {
 
     return (
         <div className='Login'>
-            <div className='Login__form'>
-                <h3>Welcome Back!</h3>
-                <p className='Login__form-desc'>We are excited to have your back. Log in now and access your account.</p>
-                <form action="form" className='Login__form-form'>
-                    <input type="email" placeholder='ExampleUserName@gmail.com' />
-
-                    <div className="Login__form-form-container">
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            placeholder='Password'
-                        />
-                        <button
-                            type="button"
-                            onClick={togglePasswordVisibility}
-                            className="Login__form-form-container-btn"
-                        >
-                            {showPassword ? <img src="./img/showpassword.svg" alt="" /> : <img src="./img/showpassword.svg" alt="" />}
-                        </button>
-                    </div>
-                    <div className='Login__form-form-inner'>
-                        <div className='Login__form-form-inner-check_block' onClick={() => { setremember(!remember) }}>
-                            <div className={`Login__form-form-inner-check ${remember && 'Login__form-form-inner-check_checked'}`}>
-                                <img src="/img/check.svg" alt="" />
+            <div className='Login_balancer'></div>
+            <div className='Login_content'>
+                <h3 className='Login__title'>Welcome Back!</h3>
+                <p className='Login__description'>We are excited to have your back. Log in now and access your account.</p>
+                <div className='Login__form'>
+                    <form action="form" className='Login__form-form'>
+                        <InputBlock placeholder={'ExampleUserName@gmail.com'} type={'email'}/>
+                        <InputBlock placeholder={'Password'} type={'password'}/>
+                        <div className='Login__form-form-inner'>
+                            <div className='Login__form-form-inner-check_block' onClick={() => { setremember(!remember) }}>
+                                <div className={`Login__form-form-inner-check ${remember && 'Login__form-form-inner-check_checked'}`}>
+                                    <img src="/img/check.svg" alt="" />
+                                </div>
+                                <div className='Login__form-form-inner-check-rem'>Remember Me</div>
                             </div>
-                            <div>Remember Me</div>
+                            <a href="#" onClick={() => settab("Forgot")}>Forgot Your Password?</a>
                         </div>
-                        <a href="#" onClick={() => settab("Forgot")}>Forgot Your Password?</a>
-                    </div>
-                    <button type='#' className='Login__form-form-btn'>Log In</button>
-                </form>
+                        <button type='#' className='Login__form-form-btn'>Log In</button>
+                    </form>
+                </div>
             </div>
-            <div className='Login__description'>
-                <a>Don’t have an account yet? <span onClick={() => settab("Register")}>Register</span></a>
-                <a>Contact Support</a>
+
+            <div className='Login__footer'>
+                <a href="#">Don’t have an account yet? <span onClick={() => settab("Register")}>Register</span></a>
+                <a href="#">Contact Support</a>
             </div>
         </div>
     );

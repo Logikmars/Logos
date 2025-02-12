@@ -1,7 +1,7 @@
 import "./Welcome.scss";
 import { useState, useRef } from "react";
 
-export default () => {
+export default ({ settab }) => {
     const [selected, setSelected] = useState(2); // Изначально выбран второй элемент
     const [images, setImages] = useState([
         "./img/Welcome/Protocol.svg",
@@ -59,7 +59,7 @@ export default () => {
                 </div>
                 <div className="Welcome__mouse-desc">
                     <p className="inactive">WALLET PROTOCOL</p>
-                    <a className="activeVisa">VISA</a>
+                    <a className="activeVisa" onClick={()=>{settab("Cards")}}>VISA</a>
                     <p className="inactive2">WALLET PROTOCOL</p>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-import Modal from '../../pages/Modal/Modal';
 import './Header.scss';
 import { useState } from 'react';
 
@@ -20,7 +19,6 @@ const Header = ({ settab }) => {
             <span></span>
             <span></span>
           </div>
-          {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen} /> */}
           <img className='Header__item-logoimg' src="./img/logo.svg" alt="" onClick={() => settab("Welcome")} />
           <p className='Header__item-logo' >logos</p>
         </div>
@@ -36,10 +34,10 @@ const Header = ({ settab }) => {
       </div>
       <div className={`Header_links ${isMobileMenuOpen && 'Header_links_open'}`}>
         <div className='Header__item Header__item-navigation'>
-          <a className='Header__item-nav' href="#">Visa Card</a>
+          <a className='Header__item-nav' href="#" onClick={()=>{settab("Cards")}}>Visa Card</a>
           <a className='Header__item-nav' href="#">Wallet</a>
           <a className='Header__item-nav' href="#">Introduction</a>
-          <a className='Header__item-nav' href="#">Protocols</a>
+          <a className='Header__item-nav' href="#" onClick={()=>{settab("Protocols")}}>Protocols</a>
         </div>
       </div>
     </>

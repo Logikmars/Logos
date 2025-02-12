@@ -1,3 +1,4 @@
+import InputBlock from '../../components/InputBlock/InputBlock';
 import './Register.scss';
 import { useState } from 'react';
 export default ({ settab }) => {
@@ -21,34 +22,10 @@ export default ({ settab }) => {
                 <form action="#" onSubmit={(e) => {
                     e.stopPropagation()
                 }} className='Register__form'>
-                    <input type="text" placeholder='Name' />
-                    <input type="email" placeholder='Email Address' />
-                    <div className="Login__form-form-container">
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            placeholder='Password'
-                        />
-                        <button
-                            type="button"
-                            onClick={togglePasswordVisibility}
-                            className="Login__form-form-container-btn Register__btn"
-                        >
-                            {showPassword ? <img src="./img/showpassword.svg" alt="" /> : <img src="./img/showpassword.svg" alt="" />}
-                        </button>
-                    </div>
-                    <div className="Login__form-form-container">
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            placeholder='Password'
-                        />
-                        <button
-                            type="button"
-                            onClick={togglePasswordVisibility}
-                            className="Login__form-form-container-btn Register__btn"
-                        >
-                            {showPassword ? <img src="./img/showpassword.svg" alt="" /> : <img src="./img/showpassword.svg" alt="" />}
-                        </button>
-                    </div>
+                    <InputBlock placeholder={'Name'} type={'text'}/>
+                    <InputBlock placeholder={'Email Address'} type={'email'}/>
+                    <InputBlock placeholder={'Password'} type={'password'}/>
+                    <InputBlock placeholder={'Confirm Password'} type={'password'}/>
                     <button className='Register__form-btn'>Register</button>
                 </form>
             </div>
