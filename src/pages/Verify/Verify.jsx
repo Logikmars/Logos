@@ -3,8 +3,9 @@ import { observer } from "mobx-react-lite";
 import inputStore from "../../stores/inputStore";
 import "./Verify.scss";
 import resetPasswordStore from "../../stores/resetPasswordStore";
+import { Link } from "react-router-dom";
 
-const DisplayInput = observer(({ settab }) => {
+const DisplayInput = observer(() => {
     const length = 6;
     const [values, setValues] = useState(Array(length).fill(""));
     const inputsRef = useRef([]);
@@ -59,7 +60,7 @@ const DisplayInput = observer(({ settab }) => {
                             />
                         ))}
                     </div>
-                    <button onClick={() => settab("PasswordReset")}>Confirm Changes</button>
+                    <Link to={"/PasswordReset"}>Confirm Changes</Link>
                 </form>
             </div>
             <div className='Verify__footer'>

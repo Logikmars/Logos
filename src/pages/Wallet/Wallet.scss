@@ -1,74 +1,88 @@
-.Wallet{
+.Wallet {
     width: 80%;
     margin: 0 auto;
     max-width: 1600px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 50px;
-    @media (max-width: 900px){
+
+    @media (max-width: 900px) {
         flex-direction: column;
         width: 100%;
         padding: 50px 20px 0px 20px;
         gap: 34px;
     }
-    &__chat{
+
+    &__chat {
         width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             order: 2;
         }
-        &-img{
-            img{
+
+        &-img {
+            img {
                 width: 270px;
             }
         }
     }
-    &__description{
+
+    &__description {
         width: 40%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
-        @media (max-width: 900px){
+
+        @media (max-width: 900px) {
             order: 1;
             align-items: center;
             width: 100%;
         }
-        @media (max-width: 500px){
+
+        @media (max-width: 500px) {
             align-items: flex-start;
         }
-        &-title{
+
+        &-title {
             font-family: "ClashDisplayMedium";
             font-size: 50px;
             line-height: 100%;
             text-align: left;
             max-width: 390px;
-            @media (max-width: 900px){
+
+            @media (max-width: 900px) {
                 max-width: 100%;
                 text-align: center;
             }
-            @media (max-width: 500px){
+
+            @media (max-width: 500px) {
                 text-align: left;
             }
         }
-        &-description{
+
+        &-description {
             color: #ACACAC;
             font-family: "Helvetica";
             line-height: 25px;
             font-size: 15px;
             max-width: 490px;
-            @media (max-width: 900px){
+
+            @media (max-width: 900px) {
                 text-align: center;
             }
-            @media (max-width: 500px){
+
+            @media (max-width: 500px) {
                 text-align: left;
             }
         }
-        &-btn{
+
+        &-btn {
             margin-top: 10px;
             width: 140px;
             height: 42px;
@@ -89,10 +103,11 @@
             @media (max-width: 900px) {
                 margin-bottom: 20px;
             }
+
             &:hover {
                 background-color: #000000;
                 color: #FFFFFF;
-    
+
                 img {
                     filter: invert(1);
                 }

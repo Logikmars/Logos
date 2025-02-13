@@ -1,34 +1,39 @@
+import { Link } from "react-router-dom";
 import "./Welcome.scss";
 import { useState, useRef } from "react";
 
 const links = [
     {
         img: '/protocol.svg',
-        to: 'protocol',
+        to: 'Protocols',
         text: 'PROTOCOL'
     },
     {
         img: '/visa.svg',
-        to: 'protocol',
+        to: 'Cards',
         text: 'VISA'
     },
     {
         img: '/logo.svg',
-        to: 'protocol',
-        text: 'VISA'
+        to: '',
+        text: 'meow'
     },
     {
         img: '/wallet.svg',
-        to: 'WALLET'
+        to: 'Wallet',
+        text: 'WALLET'
     },
     {
         img: '/login.svg',
-        to: 'CONNECT ID'
+        to: 'Login',
+        text: 'CONNECT ID'
     }
 ]
 
+export default ({ }) => {
 
-export default ({ settab }) => {
+    const [selected, setselected] = useState('');
+
     return (
         <div className="Welcome">
             <div className='Welcome_selector'>
@@ -39,14 +44,29 @@ export default ({ settab }) => {
                     <div className='Welcome_selector_items_inner'>
                         {
                             links.map((link, index) => {
-                                return <div onClick={() => { settab(link.to) }} className='Welcome_selector_item'>
+                                return <Link to={`${link.to ? `/${link.to}` : '/Welcome'} `} className='Welcome_selector_item' onMouseEnter={() => { setselected(link.text) }} onMouseLeave={() => { setselected('') }} style={{
+                                    order: index * 5
+                                }}>
                                     <img src={link.img} alt="" />
-                                </div>
+                                </Link>
                             })
                         }
                     </div>
                 </div>
-                <div className='Welcome_selector_desc'>
+                <div className='Welcome_selector_desc free_img'>
+                    <div className='Welcome_selector_desc_inner'>
+                        {
+                            links.map((link, index) => {
+                                if (link.text && link.text !== 'meow') {
+                                    return <div className='Welcome_selector_desc_item' style={{
+                                        opacity: selected === link.text || selected === 'meow' ? 1 : .2
+                                    }}>
+                                        {link.text}
+                                    </div>
+                                }
+                            })
+                        }
+                    </div>
 
                 </div>
             </div>

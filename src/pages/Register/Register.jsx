@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import InputBlock from '../../components/InputBlock/InputBlock';
 import './Register.scss';
 import { useState } from 'react';
-export default ({ settab }) => {
+export default () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -22,16 +23,16 @@ export default ({ settab }) => {
                 <form action="#" onSubmit={(e) => {
                     e.stopPropagation()
                 }} className='Register__form'>
-                    <InputBlock placeholder={'Name'} type={'text'}/>
-                    <InputBlock placeholder={'Email Address'} type={'email'}/>
-                    <InputBlock placeholder={'Password'} type={'password'}/>
-                    <InputBlock placeholder={'Confirm Password'} type={'password'}/>
+                    <InputBlock placeholder={'Name'} type={'text'} />
+                    <InputBlock placeholder={'Email Address'} type={'email'} />
+                    <InputBlock placeholder={'Password'} type={'password'} />
+                    <InputBlock placeholder={'Confirm Password'} type={'password'} />
                     <button className='Register__form-btn'>Register</button>
                 </form>
             </div>
 
             <div className='Register__footer'>
-                <a href="#">Already have an account? <span onClick={() => settab("Login")}>Log In</span></a>
+                <Link to={'/Login'}>Already have an account? <span>Log In</span></Link>
                 <a href="#">Contact Support</a>
             </div>
         </div>

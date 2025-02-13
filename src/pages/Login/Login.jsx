@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import InputBlock from '../../components/InputBlock/InputBlock';
 import './Login.scss';
 import { useState } from 'react';
 
-export default ({ settab }) => {
+export default () => {
     const [showPassword, setShowPassword] = useState(false);
     const [remember, setremember] = useState(false);
     const togglePasswordVisibility = () => {
@@ -17,8 +18,8 @@ export default ({ settab }) => {
                 <p className='Login__description'>We are excited to have your back. Log in now and access your account.</p>
                 <div className='Login__form'>
                     <form action="form" className='Login__form-form'>
-                        <InputBlock placeholder={'ExampleUserName@gmail.com'} type={'email'}/>
-                        <InputBlock placeholder={'Password'} type={'password'}/>
+                        <InputBlock placeholder={'ExampleUserName@gmail.com'} type={'email'} />
+                        <InputBlock placeholder={'Password'} type={'password'} />
                         <div className='Login__form-form-inner'>
                             <div className='Login__form-form-inner-check_block' onClick={() => { setremember(!remember) }}>
                                 <div className={`Login__form-form-inner-check ${remember && 'Login__form-form-inner-check_checked'}`}>
@@ -26,7 +27,7 @@ export default ({ settab }) => {
                                 </div>
                                 <div className='Login__form-form-inner-check-rem'>Remember Me</div>
                             </div>
-                            <a href="#" onClick={() => settab("Forgot")}>Forgot Your Password?</a>
+                            <Link to={"/Forgot"}>Forgot Your Password?</Link>
                         </div>
                         <button type='#' className='Login__form-form-btn'>Log In</button>
                     </form>
@@ -34,7 +35,7 @@ export default ({ settab }) => {
             </div>
 
             <div className='Login__footer'>
-                <a href="#">Don’t have an account yet? <span onClick={() => settab("Register")}>Register</span></a>
+                <Link to={'/Register'} >Don't have an account yet? <span>Register</span></Link>
                 <a href="#">Contact Support</a>
             </div>
         </div>

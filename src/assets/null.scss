@@ -158,9 +158,13 @@ body {
     &_content {
         display: flex;
         flex-wrap: wrap;
-        min-height: calc(100dvh - 88px);
         align-items: center;
         align-content: center;
+        min-height: calc(100dvh - 88px);
+
+        @media(max-width: 900px) {
+            min-height: calc(100dvh - 55px);
+        }
     }
 }
 

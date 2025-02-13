@@ -10,24 +10,32 @@ import Protocols from "./pages/Protocols/Protocols";
 import Cards from "./pages/Cards/Cards";
 import { observer } from "mobx-react-lite";
 import Wallet from "./pages/Wallet/Wallet";
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
+
 
 export default observer(() => {
-  const [tab, settab] = useState('Welcome');
-
   return (
-    <>
-      <Header settab={settab} />
-      <div className='App_content'>
-        {tab === 'Welcome' && <Welcome settab={settab} />}
-        {tab === 'Login' && <Login settab={settab} />}
-        {tab === 'Register' && <Register settab={settab} />}
-        {tab === 'Forgot' && <Forgot settab={settab} />}
-        {tab === 'Verify' && <Verify settab={settab} />}
-        {tab === 'PasswordReset' && <PasswordReset settab={settab} />}
-        {tab === 'Protocols' && <Protocols settab={settab} />}
-        {tab === 'Cards' && <Cards settab={settab} />}
-        {tab === 'Wallet' && <Wallet settab={settab} />}
-      </div>
-    </>
+    <div className="App">
+      <Router>
+        <Header />
+        <div className='App_content'>
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/Welcome" element={<Welcome />} />
+
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/Forgot" element={<Forgot />} />
+            <Route path="/Verify" element={<Verify />} />
+            <Route path="/PasswordReset" element={<PasswordReset />} />
+
+
+            <Route path="/Protocols" element={<Protocols />} />
+            <Route path="/Cards" element={<Cards />} />
+            <Route path="/Wallet" element={<Wallet />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   )
 })

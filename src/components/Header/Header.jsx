@@ -1,7 +1,8 @@
+import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
 import { useState } from 'react';
 
-const Header = ({ settab }) => {
+const Header = () => {
 
   const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
 
@@ -19,25 +20,27 @@ const Header = ({ settab }) => {
             <span></span>
             <span></span>
           </div>
-          <img className='Header__item-logoimg' src="./img/logo.svg" alt="" onClick={() => settab("Welcome")} />
-          <p className='Header__item-logo' onClick={() => settab("Welcome")}>logos</p>
+          <Link to={'/Welcome'} className='Header__item-logoLink'>
+            <img className='Header__item-logoimg' src="./img/logo.svg" alt="" />
+            <p className='Header__item-logo' >logos</p>
+          </Link>
         </div>
         <div className='Header__item'>
           <div className='Header__item-ds'>
             <a href="#"><img src="./img/ds.svg" alt="" /></a>
             <a href="#" className='Header__item-ds-a'>Join Our Discord</a>
           </div>
-          <button className='Header__item-id' onClick={() => settab("Login")}>
+          <Link className='Header__item-id' to={'/Login'} >
             Connect ID
-          </button>
+          </Link>
         </div>
       </div>
       <div className={`Header_links ${isMobileMenuOpen && 'Header_links_open'}`}>
         <div className='Header__item Header__item-navigation'>
-          <a className='Header__item-nav' href="#" onClick={() => { settab("Protocols") }}>Protocols</a>
-          <a className='Header__item-nav' href="#" onClick={() => { settab("Cards") }}>Visa Card</a>
-          <a className='Header__item-nav' href="#" >Wallet</a>
-          <a className='Header__item-nav' href="#" onClick={() => { settab('Welcome') }}>Introduction</a>
+          <Link className='Header__item-nav' to={"/Protocols"} onClick={() => { setisMobileMenuOpen(false) }}>Protocols</Link>
+          <Link className='Header__item-nav' to={"/Cards"} onClick={() => { setisMobileMenuOpen(false) }}>Visa Card</Link>
+          <Link className='Header__item-nav' to={"/Wallet"} onClick={() => { setisMobileMenuOpen(false) }}>Wallet</Link>
+          <Link className='Header__item-nav' to={"/Welcome"} onClick={() => { setisMobileMenuOpen(false) }}>Introduction</Link>
 
         </div>
       </div>

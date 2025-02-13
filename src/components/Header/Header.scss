@@ -76,6 +76,13 @@
             cursor: pointer;
         }
 
+        &-logoLink {
+
+            align-items: center;
+            display: flex !important;
+            column-gap: 8px;
+        }
+
         &-navigation {
             gap: 30px;
 

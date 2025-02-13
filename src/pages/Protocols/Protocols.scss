@@ -3,11 +3,13 @@
     max-width: 1600px;
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 24px;
     margin: 0 auto;
+    padding: 0px 24px;
 
     @media (max-width: 900px) {
         flex-direction: column;
+        padding: 32px 0px;
     }
 
     @media (max-width: 500px) {
@@ -23,7 +25,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 12px;
-        max-width: 600px;
+        max-width: 500px;
 
         @media (max-width: 900px) {
             order: 2;
@@ -138,10 +140,11 @@
             @media (max-width: 900px) {
                 margin-bottom: 20px;
             }
+
             &:hover {
                 background-color: #000000;
                 color: #FFFFFF;
-    
+
                 img {
                     filter: invert(1);
                 }

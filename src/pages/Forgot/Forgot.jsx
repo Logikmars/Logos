@@ -4,9 +4,10 @@ import InputBlock from '../../components/InputBlock/InputBlock';
 import resetPasswordStore from '../../stores/resetPasswordStore';
 import './Forgot.scss';
 import { observer } from "mobx-react-lite";
+import { Link } from 'react-router-dom';
 
 
-const Forgot = observer(({ settab }) => {
+const Forgot = observer(() => {
     const [email, setemail] = useState('');
 
     return (
@@ -24,10 +25,9 @@ const Forgot = observer(({ settab }) => {
                         value={email}
                         setvalue={setemail}
                     />
-                    <button onClick={() => {
-                        settab("Verify");
+                    <Link to={'/Verify'} onClick={() => {
                         resetPasswordStore.setEmail(email)
-                    }}>Send Reset Password Link</button>
+                    }}>Send Reset Password Link</Link>
                 </form>
             </div>
 
