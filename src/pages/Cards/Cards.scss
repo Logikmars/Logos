@@ -9,11 +9,10 @@
         padding-top: 65px;
     }
     &__title{
-        font-family: "ClashDisplay";
+        font-family: "ClashDisplayMedium";
         font-size: 62px;
-        background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 44%, #999999 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        text-align: center;
+        color: white;
         @media (max-width: 650px){
             max-width: 350px;
             text-align: center;
@@ -67,6 +66,10 @@
             padding-left: 20px;
             font-family: "Helvetica";
             font-size: 12px;
+            &:focus {
+                background-color: #fff;
+                color: black;
+            }
         }
         button{
             position: absolute;
@@ -82,18 +85,22 @@
             padding-left: 10px;
             padding-right: 10px;
             left: 70%;
-            transition: all 500ms ease-in-out;
+            transition: all 300ms ease-in-out;
             @media (max-width: 380px){
                 left: 65%;
             }
             img{
                 width: 22px;
                 height: 22px;
+                transition: filter 300ms;
             }
-        }
-        button:hover{
-            color: white;
-            background-color: black;
+            &:hover{
+                color: white;
+                background-color: black;
+                img {
+                    filter: invert(1);
+                }
+            }
         }
     }
     &__item{

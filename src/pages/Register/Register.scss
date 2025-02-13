@@ -6,10 +6,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
+    align-content: space-between;
     max-width: 1600px;
     min-height: calc(100dvh - 88px);
-
+    @media (max-width: 900px){
+        flex-direction: column;
+        align-content: center;
+    }
     &_balancer,
     &_content,
     &__footer {
@@ -24,13 +27,10 @@
     }
 
     &__title {
-        font-family: "ClashDisplay";
+        font-family: "ClashDisplayMedium";
         font-size: 45px;
-        font-weight: 700;
-        background: linear-gradient(to bottom, #FFFFFF 0%, #F8F8F8 44%, #9999 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         text-align: center;
+        color: white;
         @media (max-width: 540px) {
             font-size: 38px;
         }
@@ -53,10 +53,12 @@
         flex-direction: column;
         width: 70%;
         gap: 20px;
-        
+        @media (max-width: 900px) {
+            width: 100%;
+        }
 
         &-btn {
-            margin-top: 52px;
+            margin-top: 31px;
             width: 430px;
             border-radius: 3px;
             padding: 14px 0 14px 0;
@@ -64,8 +66,8 @@
             background-color: #7177FF;
             font-weight: 500;
 
-            @media (max-width: 500px) {
-                width: 250px;
+            @media (max-width: 900px) {
+                width: 100%;
             }
         }
     }
