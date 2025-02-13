@@ -38,6 +38,7 @@ const Header = ({ settab }) => {
           <a className='Header__item-nav' href="#" onClick={() => { settab("Cards") }}>Visa Card</a>
           <a className='Header__item-nav' href="#" >Wallet</a>
           <a className='Header__item-nav' href="#" onClick={() => { settab('Welcome') }}>Introduction</a>
+
         </div>
       </div>
     </>

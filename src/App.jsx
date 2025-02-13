@@ -9,6 +9,7 @@ import PasswordReset from "./pages/PasswordReset/PasswordReset";
 import Protocols from "./pages/Protocols/Protocols";
 import Cards from "./pages/Cards/Cards";
 import { observer } from "mobx-react-lite";
+import Wallet from "./pages/Wallet/Wallet";
 
 export default observer(() => {
   const [tab, settab] = useState('Welcome');
@@ -25,6 +26,7 @@ export default observer(() => {
         {tab === 'PasswordReset' && <PasswordReset settab={settab} />}
         {tab === 'Protocols' && <Protocols settab={settab} />}
         {tab === 'Cards' && <Cards settab={settab} />}
+        {tab === 'Wallet' && <Wallet settab={settab} />}
       </div>
     </>
   )
