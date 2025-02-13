@@ -38,8 +38,6 @@ export default ({ }) => {
 
     const [selected, setselected] = useState('');
 
-
-
     const app = useRef(null)
 
     useGSAP(
@@ -62,6 +60,10 @@ export default ({ }) => {
     return (
         <div className="Welcome" ref={app}>
             <div className='Welcome_selector'>
+
+                <div className='Welcome_selector_decor_stars free_img'>
+                    <img src="/stars.svg" alt="" />
+                </div>
                 <div className='Welcome_selector_decor free_img'>
                     <img src="/welcome.svg" alt="" />
                 </div>

@@ -43,6 +43,28 @@
             z-index: 0;
             top: -2px;
 
+            &_stars {
+                z-index: 5;
+                user-select: none;
+                pointer-events: none;
+
+                img {
+                    height: 100vh;
+                    opacity: .5;
+                    animation: stars 120s infinite linear;
+                }
+
+                @keyframes stars {
+                    0% {
+                        rotate: 0deg;
+                    }
+
+                    100% {
+                        rotate: 360deg;
+                    }
+                }
+            }
+
             img {
                 @media(max-width: 700px) {
                     width: 800px;
