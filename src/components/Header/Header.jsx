@@ -35,7 +35,7 @@ const Header = ({ settab }) => {
       <div className={`Header_links ${isMobileMenuOpen && 'Header_links_open'}`}>
         <div className='Header__item Header__item-navigation'>
           <a className='Header__item-nav' href="#" onClick={()=>{settab("Cards")}}>Visa Card</a>
-          <a className='Header__item-nav' href="#">Wallet</a>
+          <a className='Header__item-nav' href="#" onClick={()=>{settab("Wallet")}}>Wallet</a>
           <a className='Header__item-nav' href="#">Introduction</a>
           <a className='Header__item-nav' href="#" onClick={()=>{settab("Protocols")}}>Protocols</a>
         </div>

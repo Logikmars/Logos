@@ -2,8 +2,7 @@
     width: 100%;
     max-width: 1600px;
     display: flex;
-    justify-content: space-evenly;
-    // align-items: center;
+    justify-content: center;
     gap: 5px;
     margin: 0 auto;
 
@@ -24,6 +23,7 @@
         flex-wrap: wrap;
         align-items: center;
         gap: 12px;
+        max-width: 600px;
 
         @media (max-width: 900px) {
             order: 2;
