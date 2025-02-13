@@ -1,68 +1,56 @@
 import "./Welcome.scss";
 import { useState, useRef } from "react";
 
+const links = [
+    {
+        img: '/protocol.svg',
+        to: 'protocol',
+        text: 'PROTOCOL'
+    },
+    {
+        img: '/visa.svg',
+        to: 'protocol',
+        text: 'VISA'
+    },
+    {
+        img: '/logo.svg',
+        to: 'protocol',
+        text: 'VISA'
+    },
+    {
+        img: '/wallet.svg',
+        to: 'WALLET'
+    },
+    {
+        img: '/login.svg',
+        to: 'CONNECT ID'
+    }
+]
+
+
 export default ({ settab }) => {
-    const [selected, setSelected] = useState(2); // Изначально выбран второй элемент
-    const [images, setImages] = useState([
-        "./img/Welcome/Protocol.svg",
-        "./img/Welcome/Visa.svg",
-        "./img/Welcome/Logo.svg",
-        "./img/Welcome/Wallet.svg",
-        "./img/Welcome/Intro.svg"
-    ]);
-
-    const imageRefs = useRef([]);
-
-    const handleClick = (index) => {
-        // Меняем местами текущий активный элемент и тот, по которому кликнули
-        const newImages = [...images];
-        const temp = newImages[selected];
-        newImages[selected] = newImages[index];
-        newImages[index] = temp;
-
-        // Обновляем список изображений и индекс выбранного элемента
-        setImages(newImages);
-        setSelected(index);
-
-        // Прокручиваем к элементу, на который кликнули
-        if (imageRefs.current[index]) {
-            imageRefs.current[index].scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-                inline: "center"
-            });
-        }
-    };
-
     return (
         <div className="Welcome">
-            <div className="Welcome__decor">
-                <img src="./img/Welcome/Illustration.png" alt="" className="Welcome__decor-Illustration"/>
-                <img className="Welcome__decor-wrapper" src="./img/Welcome/LogoWrapper.svg" alt="" />
-            </div>
-            <div className="Welcome__swipe">
-                {images.map((src, index) => (
-                    <img
-                        key={index}
-                        src={src}
-                        alt=""
-                        className={selected === index ? "selected" : ""}
-                        onClick={() => handleClick(index)}
-                        ref={(el) => (imageRefs.current[index] = el)}
-                    />
-                ))}
-            </div>
-            <div className="Welcome__mouse">
-                <div className="Welcome__mouse-mouse">
-                    <img className="Welcome__mouse-mouse-img" src="./img/Welcome/mouse.svg" alt="" />
-                    <img className="Welcome__mouse-mouse-arrow" src="./img/Welcome/Arrows.svg" alt="" />
+            <div className='Welcome_selector'>
+                <div className='Welcome_selector_decor free_img'>
+                    <img src="/welcome.svg" alt="" />
                 </div>
-                <div className="Welcome__mouse-desc">
-                    <p className="inactive">WALLET PROTOCOL</p>
-                    <a className="activeVisa" onClick={()=>{settab("Cards")}}>VISA</a>
-                    <p className="inactive2">WALLET PROTOCOL</p>
+                <div className='Welcome_selector_items free_img'>
+                    <div className='Welcome_selector_items_inner'>
+                        {
+                            links.map((link, index) => {
+                                return <div onClick={() => { settab(link.to) }} className='Welcome_selector_item'>
+                                    <img src={link.img} alt="" />
+                                </div>
+                            })
+                        }
+                    </div>
+                </div>
+                <div className='Welcome_selector_desc'>
+
                 </div>
             </div>
+
         </div>
     );
 };

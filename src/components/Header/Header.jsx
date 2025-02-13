@@ -20,7 +20,7 @@ const Header = ({ settab }) => {
             <span></span>
           </div>
           <img className='Header__item-logoimg' src="./img/logo.svg" alt="" onClick={() => settab("Welcome")} />
-          <p className='Header__item-logo' >logos</p>
+          <p className='Header__item-logo' onClick={() => settab("Welcome")}>logos</p>
         </div>
         <div className='Header__item'>
           <div className='Header__item-ds'>
@@ -34,10 +34,10 @@ const Header = ({ settab }) => {
       </div>
       <div className={`Header_links ${isMobileMenuOpen && 'Header_links_open'}`}>
         <div className='Header__item Header__item-navigation'>
-          <a className='Header__item-nav' href="#" onClick={()=>{settab("Cards")}}>Visa Card</a>
-          <a className='Header__item-nav' href="#">Wallet</a>
-          <a className='Header__item-nav' href="#">Introduction</a>
-          <a className='Header__item-nav' href="#" onClick={()=>{settab("Protocols")}}>Protocols</a>
+          <a className='Header__item-nav' href="#" onClick={() => { settab("Protocols") }}>Protocols</a>
+          <a className='Header__item-nav' href="#" onClick={() => { settab("Cards") }}>Visa Card</a>
+          <a className='Header__item-nav' href="#" >Wallet</a>
+          <a className='Header__item-nav' href="#" onClick={() => { settab('Welcome') }}>Introduction</a>
         </div>
       </div>
     </>
