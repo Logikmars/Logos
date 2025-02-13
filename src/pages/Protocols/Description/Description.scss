@@ -35,6 +35,11 @@
     img {
         width: 38px;
         height: 38px;
+
+        @media(min-width: 1600px) {
+            width: 56px;
+            height: 56px;
+        }
     }
 
     &__container {
@@ -42,23 +47,36 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @media(min-width: 1600px) {
+            max-width: 500px;
+        }
     }
 
     &__title {
         font-family: "Helvetica";
         font-size: 16px;
-        line-height: 16px
+        line-height: 16px;
+
+        @media(min-width: 1600px) {
+            font-size: 24px;
+        }
     }
 
     &__description {
         color: #FFFFFF44;
         font-size: 10px;
-        font-family: "Helvetica";
         line-height: 12px;
+        font-family: "Helvetica";
         letter-spacing: 0;
 
         @media (max-width: 500px) {
             font-size: 9px;
+        }
+
+        @media(min-width: 1600px) {
+            font-size: 16px;
+            line-height: 18px;
         }
     }
 }

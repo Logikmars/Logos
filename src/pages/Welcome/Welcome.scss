@@ -47,7 +47,12 @@
                 @media(max-width: 700px) {
                     width: 800px;
                 }
+
+                @media(min-width: 1600px) {
+                    min-width: 1200px;
+                }
             }
+
         }
 
         &_items_inner {
@@ -76,6 +81,10 @@
                 width: 100px;
                 opacity: .7;
                 transition: filter 200ms, opacity 200ms, scale 200ms;
+
+                @media(min-width: 1600px) {
+                    width: 150px;
+                }
             }
 
             &:nth-child(3) {

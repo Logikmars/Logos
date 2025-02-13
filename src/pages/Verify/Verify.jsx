@@ -41,7 +41,7 @@ const DisplayInput = observer(() => {
             <div className="Verify_content">
                 <h3 className="Verify__title">Verify Code</h3>
                 <p className="Verify__description">
-                    Enter the passcode you just received on your email address '{resetPasswordStore.email}'
+                    Enter the passcode you just received on your email address {resetPasswordStore.email}
                 </p>
                 <form action="#" className="Verify__form" onSubmit={(e) => {
                     e.stopPropagation()

@@ -12,6 +12,14 @@ import { observer } from "mobx-react-lite";
 import Wallet from "./pages/Wallet/Wallet";
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
+import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
 
 export default observer(() => {
   return (
@@ -22,6 +30,7 @@ export default observer(() => {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/Welcome" element={<Welcome />} />
+
 
             <Route path="/Login" element={<Login />} />
             <Route path="/Register" element={<Register />} />

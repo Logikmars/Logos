@@ -1,12 +1,37 @@
 import { useState } from 'react';
 import Description from './Description/Description';
 import './Protocols.scss';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import gsap from 'gsap';
+
 export default () => {
 
     const [activeLine, setActiveLine] = useState(0);
 
+
+    const app = useRef(null)
+
+    useGSAP(
+        () => {
+            for (let i = 0; i < 3; i++) {
+                gsap.fromTo(`.Description_${i}`, {
+                    x: -200,
+                    opacity: 0,
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    delay: .5 * (i + 1),
+                    duration: 1
+                })
+            }
+        },
+        { scope: app }
+    )
+
     return (
-        <div className='Protocols'>
+        <div className='Protocols' ref={app}>
             <div className='Protocols__description'>
                 {[
                     { title: 'Zero Gas Fees', description: 'Forget about gas fees eating into your profits. Liquid Layer removes transaction fees, allowing traders to move assets without paying network costs. This means more frequent trades, better arbitrage opportunities, and a level playing field for all users.' },
@@ -17,6 +42,7 @@ export default () => {
                         key={index}
                         img={'/img/descriptionLogo.svg'}
                         title={item.title}
+                        index={index}
                         description={item.description}
                         onClick={() => setActiveLine(index)}
                     />

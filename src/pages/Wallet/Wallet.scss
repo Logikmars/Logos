@@ -27,6 +27,10 @@
         &-img {
             img {
                 width: 270px;
+
+                @media(min-width: 1600px) {
+                    width: 340px;
+                }
             }
         }
     }
@@ -56,6 +60,10 @@
             text-align: left;
             max-width: 390px;
 
+            @media(min-width: 1600px) {
+                max-width: 500px;
+            }
+
             @media (max-width: 900px) {
                 max-width: 100%;
                 text-align: center;
@@ -72,6 +80,10 @@
             line-height: 25px;
             font-size: 15px;
             max-width: 490px;
+
+            @media(min-width: 1600px) {
+                font-size: 20px;
+            }
 
             @media (max-width: 900px) {
                 text-align: center;
@@ -95,6 +107,11 @@
             font-family: "Helvetica";
             font-size: 12px;
             transition: all 300ms ease-in-out;
+
+            @media(min-width: 1600px) {
+                font-size: 18px;
+                width: 200px;
+            }
 
             img {
                 transition: filter 300ms;

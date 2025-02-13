@@ -57,6 +57,10 @@
         text-align: center;
         margin-top: 5px;
         margin-bottom: 30px;
+
+        @media(min-width: 1600px) {
+            font-size: 18px;
+        }
     }
 
     &__form {
@@ -86,6 +90,10 @@
             @media (max-width: 900px) {
                 width: 100%;
             }
+
+            @media(min-width: 1600px) {
+                font-size: 20px;
+            }
         }
     }
 
@@ -111,6 +119,10 @@
             font-size: 15px;
             font-weight: 300;
             color: rgba($color: #ffffff, $alpha: 0.5);
+
+            @media(min-width: 1600px) {
+                font-size: 18px;
+            }
         }
     }
 }

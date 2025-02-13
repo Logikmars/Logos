@@ -1,19 +1,22 @@
-.InputBlock{
+.InputBlock {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     max-width: 430px;
+
     @media (max-width: 900px) {
         width: 100%;
         max-width: 100%;
         min-width: 100%;
-     }
+    }
+
     @media (max-width: 500px) {
         max-width: 300px;
     }
-    input{
+
+    input {
         height: 45px;
         width: 430px;
         background-color: #fff0;
@@ -28,21 +31,27 @@
         font-weight: 300;
         letter-spacing: 3%;
 
+        @media(min-width: 1600px) {
+            font-size: 20px;
+        }
+
         &:focus {
             background-color: #fff;
             color: black;
         }
 
         @media (max-width: 900px) {
-           width: 100%;
-           max-width: 100%;
-           min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
         }
+
         // @media (max-width: 450px) {
         //     width: 200px;
         // }
     }
-    button{
+
+    button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -50,17 +59,21 @@
         z-index: 2;
         right: 20px;
         background-color: transparent;
-        img{
+
+        img {
             width: 14px;
             height: 12px;
         }
-        @media (max-width: 450px){
+
+        @media (max-width: 450px) {
             right: 50px;
         }
-        @media (max-width: 400px){
+
+        @media (max-width: 400px) {
             right: 30px;
         }
-        @media (max-width: 360px){
+
+        @media (max-width: 360px) {
             right: 20px;
         }
     }

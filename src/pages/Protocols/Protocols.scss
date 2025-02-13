@@ -27,6 +27,10 @@
         gap: 12px;
         max-width: 500px;
 
+        @media(min-width: 1600px) {
+            max-width: 600px;
+        }
+
         @media (max-width: 900px) {
             order: 2;
             width: 100%;
@@ -118,6 +122,11 @@
             @media (max-width: 500px) {
                 text-align: left;
             }
+
+            @media(min-width: 1600px) {
+                font-size: 20px;
+                line-height: 25px;
+            }
         }
 
         &-btn {
@@ -132,6 +141,11 @@
             font-family: "Helvetica";
             font-size: 12px;
             transition: all 300ms ease-in-out;
+
+            @media(min-width: 1600px) {
+                font-size: 18px;
+                width: 200px;
+            }
 
             img {
                 transition: filter 300ms;

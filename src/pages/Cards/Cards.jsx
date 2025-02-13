@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import './Cards.scss';
 import CardItem from './Cards/CardItem';
 
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import gsap from 'gsap';
 
 const chels = ['TRUMP', 'PNUT', 'PEPE', 'MUMU', 'PEPE']
 
@@ -20,8 +23,24 @@ export default () => {
     }, [])
 
 
+    const app = useRef(null)
+
+    useGSAP(
+        () => {
+            gsap.fromTo(`.Cards__decor`, {
+                y: 200,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                delay: .5,
+                duration: 1
+            })
+        },
+        { scope: app }
+    )
     return (
-        <div className='Cards'>
+        <div className='Cards' ref={app}>
             <div className='Cards_balancer'></div>
             <div className='Cards_content'>
 

@@ -9,10 +9,12 @@
     align-content: space-between;
     max-width: 1600px;
     min-height: calc(100dvh - 88px);
-    @media (max-width: 900px){
+
+    @media (max-width: 900px) {
         flex-direction: column;
         align-content: center;
     }
+
     &_balancer,
     &_content,
     &__footer {
@@ -31,8 +33,13 @@
         font-size: 45px;
         text-align: center;
         color: white;
+
         @media (max-width: 540px) {
             font-size: 38px;
+        }
+
+        @media(min-width: 1600px) {
+            font-size: 60px;
         }
     }
 
@@ -44,6 +51,10 @@
         text-align: center;
         margin-top: 5px;
         margin-bottom: 30px;
+
+        @media(min-width: 1600px) {
+            font-size: 18px;
+        }
     }
 
     &__form {
@@ -53,6 +64,7 @@
         flex-direction: column;
         width: 70%;
         gap: 20px;
+
         @media (max-width: 900px) {
             width: 100%;
         }
@@ -65,6 +77,10 @@
             font-family: "ClashDisplay";
             background-color: #7177FF;
             font-weight: 500;
+
+            @media(min-width: 1600px) {
+                font-size: 20px;
+            }
 
             @media (max-width: 900px) {
                 width: 100%;
@@ -98,12 +114,20 @@
             font-size: 15px;
             font-weight: 300;
             color: rgba($color: #ffffff, $alpha: 0.5);
+
+            @media(min-width: 1600px) {
+                font-size: 18px;
+            }
         }
 
         span {
             font-family: "Helvetica";
             font-weight: 700;
             font-size: 15px;
+
+            @media(min-width: 1600px) {
+                font-size: 18px;
+            }
         }
     }
 }
