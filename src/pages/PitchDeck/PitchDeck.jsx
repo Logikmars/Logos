@@ -9,7 +9,7 @@ export default () => {
         // <iframe src="/pd.pdf" className='PitchDeck' />
         // 1YOs40WCitIdF9xOI5-39IQVEaAs_tftO
         <iframe
-            src={`https://drive.google.com/viewerng/viewer?embedded=true&url=${siteUrl}#toolbar=0&scrollbar=0`}
+            src={`https://drive.google.com/viewerng/viewer?embedded=true&url=${siteUrl}/pd.pdf#toolbar=0&scrollbar=0`}
 
             className='PitchDeck'
         ></iframe>
