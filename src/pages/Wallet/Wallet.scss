@@ -1,5 +1,5 @@
 .Wallet {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     max-width: 1600px;
     display: flex;
@@ -15,24 +15,74 @@
     }
 
     &__chat {
-        width: 40%;
+        width: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
+        align-content: center;
+        height: 700px;
+        flex-wrap: wrap;
+
+        @media(max-height: 900px) {
+            padding-top: 100px;
+        }
 
         @media (max-width: 900px) {
             order: 2;
+
         }
 
-        &-img {
-            img {
-                width: 270px;
+        &_el {
+            width: 100% !important;
 
-                @media(min-width: 1600px) {
-                    width: 340px;
+            img {
+                width: 350px;
+            }
+        }
+
+        &_cat {
+            top: -150px;
+
+            img {
+                image-rendering: pixelated;
+                width: 120px;
+                cursor: pointer;
+                transition: filter 200ms, scale 200ms;
+
+                &:hover {
+                    scale: 1.2;
+                    filter: brightness(1.2)
                 }
             }
         }
+
+        &_msg {
+            img {
+                width: 300px;
+            }
+        }
+
+        &_msg1 {
+            top: 40px;
+        }
+
+        &_msg2 {
+            top: 85px;
+        }
+
+        &_msg3 {
+            top: 130px;
+        }
+
+        &_msg4 {
+            top: 170px;
+        }
+
+        &_msg5 {
+            top: 210px;
+            left: 2px;
+        }
+
     }
 
     &__description {
@@ -60,7 +110,7 @@
             text-align: left;
             max-width: 390px;
 
-            @media(min-width: 1600px) {
+            @media(min-width: 1930px) {
                 max-width: 500px;
             }
 
@@ -81,7 +131,7 @@
             font-size: 15px;
             max-width: 490px;
 
-            @media(min-width: 1600px) {
+            @media(min-width: 1930px) {
                 font-size: 20px;
             }
 
@@ -101,16 +151,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #000000;
             border-radius: 160px;
             padding: 13px 5px 13px 13px;
-            font-family: "Helvetica";
-            font-size: 12px;
             transition: all 300ms ease-in-out;
 
-            @media(min-width: 1600px) {
-                font-size: 18px;
+            span {
+                font-family: "Helvetica";
+                transition: all 300ms ease-in-out;
+                color: #000000;
+                font-size: 12px;
+            }
+
+            @media(min-width: 1930px) {
                 width: 200px;
+
+                span {
+                    font-size: 18px;
+                }
             }
 
             img {
@@ -123,7 +180,10 @@
 
             &:hover {
                 background-color: #000000;
-                color: #FFFFFF;
+
+                span {
+                    color: #FFFFFF;
+                }
 
                 img {
                     filter: invert(1);

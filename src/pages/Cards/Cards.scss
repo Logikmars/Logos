@@ -16,6 +16,7 @@
     &_content,
     &__decor {
         width: 100%;
+        position: relative;
     }
 
     &__decor {
@@ -23,6 +24,105 @@
         width: 100%;
         display: flex;
         justify-content: center;
+
+        &_black {
+            transition: filter 200ms, opacity 500ms;
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(1.5)
+            }
+        }
+
+        &_colored {
+            pointer-events: none;
+
+            &_1 {
+                top: -50px;
+                left: 30px;
+                rotate: -20deg;
+            }
+
+            &_2 {
+                top: 50px;
+                left: -240px;
+            }
+
+            &_3 {
+                left: 180px;
+                top: 110px;
+                rotate: 15deg;
+                z-index: 4 !important;
+            }
+
+            &_4 {
+                z-index: 50;
+                top: 240px;
+                rotate: 20deg;
+                left: -100px;
+
+                .Cards__decor_colored_item_inner {
+                    width: 369px;
+                    height: 211px;
+                    border-radius: 12px;
+                    backdrop-filter: blur(15px);
+                }
+            }
+
+            &_5 {
+                rotate: -15deg;
+                top: 320px;
+                left: 220px;
+                z-index: 3 !important;
+            }
+
+            &_6 {
+                rotate: -20deg;
+                top: 400px;
+                left: -100px;
+                z-index: 2 !important;
+            }
+
+            &_item {
+                img {
+                    width: 370px;
+                }
+            }
+        }
+
+        &_mouse {
+            top: 250px;
+            animation: mouseAnim 2s infinite;
+
+            @keyframes mouseAnim {
+                0% {
+                    scale: 1;
+                }
+
+                10% {
+                    rotate: 10deg;
+                    scale: 1.5;
+                }
+
+                20% {
+                    scale: 1;
+                }
+
+                30% {
+                    rotate: -10deg;
+                    scale: 1.5;
+                }
+
+                40% {
+                    rotate: 0deg;
+                    scale: 1;
+                }
+
+                100% {
+                    scale: 1;
+                }
+            }
+        }
 
         &_card {
             align-items: start !important;
@@ -34,6 +134,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 2;
     }
 
     &__title {
@@ -60,7 +161,7 @@
         max-width: 570px;
         text-align: center;
 
-        @media(min-width: 1600px) {
+        @media(min-width: 1930px) {
             font-size: 20px;
             line-height: 26px;
         }
@@ -77,11 +178,27 @@
 
     &__join {
         margin-top: 32px;
-        font-family: "SFPro";
-        font-size: 13px;
+        display: flex;
+        column-gap: 12px;
 
-        @media(min-width: 1600px) {
-            font-size: 18px;
+        a,
+        span {
+            font-family: "SFPro";
+            font-size: 13px;
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        @media(min-width: 1930px) {
+
+            a,
+            span {
+                font-size: 18px;
+            }
+
         }
     }
 
@@ -89,7 +206,7 @@
         margin-top: 15px;
         width: 350px;
         border-radius: 57px;
-
+        backdrop-filter: blur(20px);
         padding: 5px 5px 5px 5px;
         position: relative;
         height: 60px;
@@ -101,7 +218,7 @@
             width: 300px;
         }
 
-        @media(min-width: 1600px) {
+        @media(min-width: 1930px) {
             height: 70px;
             width: 500px;
         }
@@ -120,7 +237,11 @@
             transition: background-color 200ms, color 200ms;
             outline: none;
 
-            @media(min-width: 1600px) {
+            &::placeholder {
+                color: #fff8;
+            }
+
+            @media(min-width: 1930px) {
                 font-size: 18px;
             }
 
@@ -150,7 +271,7 @@
                 left: 65%;
             }
 
-            @media(min-width: 1600px) {
+            @media(min-width: 1930px) {
                 font-size: 16px;
                 left: 70%;
                 width: 130px;
@@ -184,7 +305,7 @@
 
         &-choise {
             z-index: 5;
-            top: 260px;
+            top: 300px;
 
             &_inner {
                 min-width: 500px;
@@ -192,13 +313,78 @@
                 align-items: center;
                 justify-content: center;
                 column-gap: 12px;
+
+
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                mask-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+                -webkit-mask-image: radial-gradient(circle closest-side, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .3) 50%, rgba(0, 0, 0, 0) 100%);
             }
 
             &_element {
+                text-align: center;
                 font-size: 18px;
+                position: relative;
+                left: 3px;
                 color: #fff;
                 font-family: "ClashDisplay";
                 transition: opacity 500ms;
+                min-width: 60px;
+
+                animation: cardMascotSelectorAnim 10s ease-in-out infinite;
+
+                @keyframes cardMascotSelectorAnim {
+                    0% {
+                        transform: translate(0px, 0px);
+                    }
+
+                    5% {
+                        transform: translate(-72px, 0px);
+                    }
+
+                    20% {
+                        transform: translate(-72px, 0px);
+                    }
+
+
+                    25% {
+                        transform: translate(-144px, 0px);
+                    }
+
+                    40% {
+                        transform: translate(-144px, 0px);
+                    }
+
+
+                    45% {
+                        transform: translate(-216px, 0px);
+                    }
+
+                    60% {
+                        transform: translate(-216px, 0px);
+                    }
+
+
+                    65% {
+                        transform: translate(-288px, 0px);
+                    }
+
+                    80% {
+                        transform: translate(-288px, 0px);
+                    }
+
+                    85% {
+                        transform: translate(-360px, 0px);
+                    }
+
+                    100% {
+                        transform: translate(-360px, 0px);
+                    }
+                }
+
+
             }
         }
     }

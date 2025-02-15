@@ -44,12 +44,10 @@ export default ({ }) => {
         () => {
             for (let i = 0; i < 5; i++) {
                 gsap.fromTo(`.Welcome_selector_item_${i}`, {
-                    y: -200,
                     opacity: 0,
                 }, {
-                    y: 0,
                     opacity: 1,
-                    delay: .3 * (i + 1),
+                    delay: .2 * (i + 1),
                     duration: .5
                 })
             }
