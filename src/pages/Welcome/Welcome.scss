@@ -41,7 +41,8 @@
 
         &_decor {
             z-index: 0;
-            top: -2px;
+            top: -4px;
+            left: -.8px;
 
             &_stars {
                 z-index: 5;
@@ -105,7 +106,7 @@
                 transition: filter 200ms, opacity 200ms, scale 200ms;
 
                 @media(min-width: 1930px) {
-                    width: 150px;
+                    width: 140px;
                 }
             }
 

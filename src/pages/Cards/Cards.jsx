@@ -46,7 +46,7 @@ Users can earn passive rewards simply by using their card for everyday purchases
                 duration: 1
             })
             gsap.to(`.Cards__join_a`, {
-                text: `https://t.me/LogosLayer_bot`,
+                text: `Open mini app ->`,
                 delay: 3,
                 duration: 1
             })
@@ -85,7 +85,7 @@ Users can earn passive rewards simply by using their card for everyday purchases
                 <p className='Cards__join'><span className='Cards__join_span'>Join The Waitlist!</span><a className='Cards__join_a' href="https://t.me/LogosLayer_bot" target='blank'></a></p>
                 <div className='Cards__container'>
                     <input type="email" placeholder='Example@gmail.com' />
-                    <button>Sign Up <img src="../../../img/buttonWhitepapper.svg" alt="" /></button>
+                    <button>Sign Up <img src="/img/buttonWhitepapper.svg" alt="" /></button>
                 </div>
             </div>
             <div className='Cards__decor'>

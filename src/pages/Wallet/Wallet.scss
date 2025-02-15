@@ -4,7 +4,7 @@
     max-width: 1600px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 50px;
 
     @media (max-width: 900px) {
@@ -109,6 +109,9 @@
             line-height: 100%;
             text-align: left;
             max-width: 390px;
+            min-height: 300px;
+            display: flex;
+            align-items: end;
 
             @media(min-width: 1930px) {
                 max-width: 500px;

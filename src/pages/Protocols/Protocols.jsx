@@ -33,9 +33,9 @@ export default () => {
                 top: 0, // Убираем любое движение вниз
                 scrollTrigger: {
                     trigger: '.Protocols',
-                    // markers: true,
-                    start: "top top", // Фиксируем при достижении верха
-                    end: "bottom top", // Разрешаем выход при конце секции
+                    markers: true,
+                    start: "top 100px", // Фиксируем при достижении верха
+                    end: "bottom 100px", // Разрешаем выход при конце секции
                     pin: true, // Закрепляем
                     pinSpacing: false, // Отключаем добавление пустого пространства
                     onUpdate: (self) => {

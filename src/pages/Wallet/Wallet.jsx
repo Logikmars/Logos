@@ -2,15 +2,17 @@ import './Wallet.scss';
 
 
 import { useGSAP } from '@gsap/react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export default () => {
-    const [isSoon, setisSoon] = useState(false);
     // want to swap шоб не свапалось сразуобратно когдатекст будет прыгать
     const wts = useRef(null)
-
+    const isSoon = useRef(null)
     const app = useRef(null)
+    useEffect(() => {
+        isSoon.current = false
+    }, [])
 
     useGSAP(() => {
         const ctx = gsap.context(() => {
@@ -117,7 +119,7 @@ export default () => {
     }
 
     const showCattext = () => {
-        setisSoon(false)
+        isSoon.current = false
         gsap.to(`.memeChainText`, {
             text: 'MemeChain'
         })
@@ -145,12 +147,18 @@ export default () => {
 
 
     const swapText = () => {
+
+        console.log('swap');
         if (!wts.current) {
-            if (isSoon) {
+            console.log('swap inner');
+            if (isSoon.current) {
                 showMemeChain()
+                isSoon.current = false
             } else {
                 showSoon()
+                isSoon.current = true
             }
+
             wts.current = 'meow'
             setTimeout(() => {
                 wts.current = ''
@@ -159,7 +167,9 @@ export default () => {
     }
 
     const cattext = () => {
+        console.log('cat');
         if (!wts.current) {
+            console.log('cat inner');
             showCattext()
             wts.current = 'meow'
             setTimeout(() => {
