@@ -172,3 +172,64 @@ body {
 img {
     user-select: none;
 }
+
+/* Чёрный фон страницы */
+body {
+    background-color: black;
+}
+
+/* Стили для iframe */
+iframe {
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+/* Стилизация скроллбара */
+iframe::-webkit-scrollbar {
+    width: 5px;
+    /* Узкий вертикальный скроллбар */
+    height: 5px;
+    /* Узкий горизонтальный скроллбар */
+}
+
+iframe::-webkit-scrollbar-track {
+    background: black;
+    /* Чёрный фон скроллбара */
+}
+
+iframe::-webkit-scrollbar-thumb {
+    background: white;
+    /* Белый ползунок */
+    border-radius: 10px;
+}
+
+iframe::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+    /* Серый при наведении */
+}
+
+/* Общие стили для скроллбара (страница + iframe) */
+::-webkit-scrollbar {
+    width: 5px;
+    /* Узкий вертикальный скроллбар */
+    height: 5px;
+    /* Узкий горизонтальный скроллбар */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* Чёрный фон скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    /* Белый ползунок */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+    /* Серый при наведении */
+}

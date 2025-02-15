@@ -10,6 +10,8 @@ import Protocols from "./pages/Protocols/Protocols";
 import Cards from "./pages/Cards/Cards";
 import { observer } from "mobx-react-lite";
 import Wallet from "./pages/Wallet/Wallet";
+import PitchDeck from "./pages/PitchDeck/PitchDeck";
+
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
 import { TextPlugin } from "gsap/TextPlugin";
@@ -42,6 +44,8 @@ export default observer(() => {
             <Route path="/Protocols" element={<Protocols />} />
             <Route path="/Cards" element={<Cards />} />
             <Route path="/Wallet" element={<Wallet />} />
+            <Route path="/PitchDeck" element={<PitchDeck />} />
+
           </Routes>
         </div>
       </Router>
